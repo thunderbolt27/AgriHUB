@@ -9,8 +9,7 @@ import uvicorn
 
 app = FastAPI()
 
-# Load YOLO models /home/skkr/Documents/AgriAI/sequential/models/pest.pt
-model_paths = [r"/home/skkr/Documents/AgriAI/sequential/models/rice.pt", r"/home/skkr/Documents/AgriAI/sequential/models/sugarcane.pt", r"/home/skkr/Documents/AgriAI/sequential/models/wheat.pt", r"/home/skkr/Documents/AgriAI/sequential/models/pest.pt"]
+model_paths = ["path_to_models"]
 models = [YOLO(model) for model in model_paths]
 
 last_result = {"model": None, "detections": [], "image": None}
